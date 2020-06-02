@@ -21,7 +21,7 @@
 
 #Teleport the "pilot"
 	tp @s[tag=warpPilot] ~ ~-0.5 ~
-	playsound minecraft:ui.toast.in player @a ~ ~ ~ 0.75 1.2
+	playsound minecraft:ui.toast.in player @a[distance=..8] ~ ~ ~ 0.75 1.2
 
 #More Advancements
 
