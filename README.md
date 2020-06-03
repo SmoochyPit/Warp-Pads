@@ -7,6 +7,7 @@ Warp Pads is a data pack for Minecraft: Java Edition enabling players to create 
 ### Features
 
 * Multiplayer friendly
+* No additional resource packs required
 * Effectively infinite warp distances
 * Balanced tiers for each game stage
 * Warp pad customization
