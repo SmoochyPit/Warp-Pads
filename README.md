@@ -4,10 +4,6 @@ Warp Pads is a data pack for Minecraft: Java Edition enabling players to create 
 
 ## About
 
-### A Brief History
-
-I started this project Fall 2018. I was able to accomplish very basic functionality. However, due to the technical limitations of data packs at the time, it was mostly a proof-of-concept and could only warp to warp pads within render distance. However, in Minecraft version 1.14.4, an important change was made that would enable this data pack to become what it is now: data packs could now use `/forceload`. So, in July 2019, I began adding to and rewriting the code for the data pack and by August, I was ready to share it with the internet. Since then, many features and changes have been made.
-
 ### Features
 
 * Multiplayer friendly
@@ -24,6 +20,10 @@ I started this project Fall 2018. I was able to accomplish very basic functional
     * Rapid warping on lower tiers will trigger a cooldown to encourage higher tiers
 * Private warp pads linked to players
 * Warping passenger system
+
+### A Brief History
+
+I started this project Fall 2018. I was able to accomplish very basic functionality. However, due to the technical limitations of data packs at the time, it was mostly a proof-of-concept and could only warp to warp pads within render distance. However, in Minecraft version 1.14.4, an important change was made that would enable this data pack to become what it is now: data packs could now use `/forceload`. So, in July 2019, I began adding to and rewriting the code for the data pack and by August, I was ready to share it with the internet. Since then, many features and changes have been made.
 
 ## Usage
 
