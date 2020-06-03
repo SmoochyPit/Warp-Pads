@@ -77,10 +77,18 @@ Warp pads in the nether are limited to 1/8th the distance of those in the overwo
 
 ## Installation
 
+### Latest Commit
 1. Click the green "Clone or download" button
 2. Click "Download ZIP"
 3. Unzip the file into the `[worldname]\datapacks` folder on your server or your Minecraft world (located at `C:\Users\[user]\AppData\Roaming\.minecraft\saves\[worldname]\datapacks` by default in Windows)
 4. Either restart the world or server or run the `/reload` command. If successful on `/reload`, the pack will announce to all players in chat: "Warp Pads has loaded"
+
+### Latest Release
+1. Click "releases"
+2. Click on the latest release
+3. Under assets, click "Source code (zip)"
+4. Unzip the file into the `[worldname]\datapacks` folder on your server or your Minecraft world (located at `C:\Users\[user]\AppData\Roaming\.minecraft\saves\[worldname]\datapacks` by default in Windows)
+5. Either restart the world or server or run the `/reload` command. If successful on `/reload`, the pack will announce to all players in chat: "Warp Pads has loaded"
 
 ### Support
 
