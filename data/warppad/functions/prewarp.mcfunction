@@ -12,7 +12,8 @@
 	execute as @e[tag=warpPad] store result score @s warppadZ run data get entity @s Pos[2] 10
    
 #Tag all untagged warp pads in the nether as "netherwarp"
-	execute as @e[tag=warpPad,tag=!netherWarp] at @s if block ~ 127 ~ bedrock run tag @s add netherWarp
+	execute as @e[tag=warpPad,tag=!netherWarp] at @s in the_nether if entity @e[tag=warpPad,tag=!netherWarp,distance=..0.1] run tag @s add netherWarp
+	execute as @e[tag=warpPad,tag=!endWarp] at @s in the_end if entity @e[tag=warpPad,tag=!endWarp,distance=..0.1] run tag @s add endWarp
 
 #Tag player if they're a "passenger" (on the warp pad but not using it)
 	tag @e remove wpPassenger
