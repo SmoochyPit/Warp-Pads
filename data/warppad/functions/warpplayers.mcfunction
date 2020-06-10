@@ -14,7 +14,7 @@
 	execute if score @s passCount matches 4.. run advancement grant @s[tag=warpPilot,advancements={warppad:warpgroup=false}] only warppad:warpgroup
 	execute if entity @e[type=creeper,tag=wpActivePass] run advancement grant @s[tag=warpPilot,advancements={warppad:warpcreep=false}] only warppad:warpcreep
 	execute if entity @s[tag=warpPilot,advancements={warppad:warp50000=false},nbt={SelectedItem:{id:"minecraft:poppy"}}] if entity @e[tag=warpPad3,distance=..0.1] if entity @s[distance=50000..] run advancement grant @s[tag=warpPilot] only warppad:warp50000
-	execute unless entity @e[tag=warpPad,distance=..0.1,scores={linkedUUIDL=0}] if entity @a[tag=wpActivePass] run advancement grant @s[advancements={warppad:privpass=false}] only warppad:privpass
+	execute unless entity @e[tag=warpPad,distance=..0.1,scores={linkedUUID=0}] if entity @a[tag=wpActivePass] run advancement grant @s[advancements={warppad:privpass=false}] only warppad:privpass
 	advancement grant @s[tag=warpPilot,advancements={warppad:warped=false}] only warppad:warped
 	execute if entity @e[type=wolf,tag=wpActivePass] run advancement grant @s[tag=warpPilot,advancements={warppad:warpdog=false}] only warppad:warpdog
 	advancement grant @a[tag=wpActivePass,advancements={warppad:warppass=false}] only warppad:warppass

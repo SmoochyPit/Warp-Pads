@@ -1,11 +1,9 @@
 #This file runs when a warp pad is active
 
 #Set player UUID scoreboard objectives
-	scoreboard players add @a linkedUUIDL 0
-	scoreboard players add @a linkedUUIDM 0
+	scoreboard players add @a linkedUUID 0
 
-	execute as @a[scores={linkedUUIDL=0}] store result score @s linkedUUIDL run data get entity @s UUIDLeast 0.0000000001
-	execute as @a[scores={linkedUUIDM=0}] store result score @s linkedUUIDM run data get entity @s UUIDMost 0.0000000001
+	execute as @a[scores={linkedUUID=0}] store result score @s linkedUUID run data get entity @s UUID[0]
 
 #Set warp pads' "warppadX" and "warppadZ" to corresponding coords, scaled by 10
 	execute as @e[tag=warpPad] store result score @s warppadX run data get entity @s Pos[0] 10
