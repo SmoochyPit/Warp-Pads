@@ -92,7 +92,7 @@ Warp pads in the nether are limited to 1/8th the distance of those in the overwo
 
 ### Support
 
-Supports Minecraft: Java Edition 1.14.4-1.15.2. Full support for Minecraft 1.16 is planned.
+Supports Minecraft: Java Edition 1.16. A legacy version supporting Minecraft 1.14.4-1.15.2 can be found [here](https://github.com/SmoochyPit/Warp-Pads/tree/legacy).
 
 ## Credits
 
