@@ -34,4 +34,4 @@ scoreboard objectives add dist60 dummy
 scoreboard objectives add dist75 dummy
 
 
-tellraw @a {"text":"Warp Pads ","color":"dark_red","extra":[{"text":"v1.2.2","color":"light_purple","hoverEvent":{"action":"show_text","value":"For Minecraft 1.16, By SmoochyPit"}},{"text":" has successfully loaded.","color":"dark_red"}]}
+tellraw @a {"text":"Warp Pads ","color":"green","extra":[{"text":"v1.2.2","color":"light_purple","hoverEvent":{"action":"show_text","value":"For Minecraft 1.16, By SmoochyPit"}},{"text":" has successfully loaded.","color":"green"}]}
