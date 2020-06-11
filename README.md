@@ -78,9 +78,9 @@ Warp pads in the nether are limited to 1/8th the distance of those in the overwo
 ## Installation
 ### Step 1 - Download
 
-1. Click "releases"
-2. Click on the latest release
-3. Download one of the following ways:
+1. Click [releases](https://github.com/SmoochyPit/Warp-Pads/releases)
+2. Find the latest release
+3. Choose one of the following ways to download: (Option 1 is recommended if available).
     1. Under assets, click "WarpPadsvX.X.X.zip" to download the archived data pack. *This file **should not** be unzipped before installation*
     2. Under assets, click "Source Code (zip)" to download the zipped data pack folder. *This file needs to be unzipped before installation*
 4. Select one of the following methods for installing the data pack:
