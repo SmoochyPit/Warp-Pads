@@ -28,7 +28,7 @@ I started this project Fall 2018. I was able to accomplish very basic functional
 
 ## Usage
 
-To warp, stand on a warp pad, look at the indicator for the desired warp pad and sneak (Left-Shift by default).
+To warp, stand on a warp pad, look at the indicator for the desired warp pad and sneak (Left-Shift by default). Any mobs or players on top of the warp pad will be warped, too.
 
 ### Creation
 
@@ -76,19 +76,38 @@ The following items will *not* be dropped:
 Warp pads in the nether are limited to 1/8th the distance of those in the overworld.
 
 ## Installation
+### Step 1 - Download
 
-### Latest Commit
-1. Click the green "Clone or download" button
-2. Click "Download ZIP"
-3. Unzip the file into the `[worldname]\datapacks` folder on your server or your Minecraft world (located at `C:\Users\[user]\AppData\Roaming\.minecraft\saves\[worldname]\datapacks` by default in Windows)
-4. Either restart the world or server or run the `/reload` command. If successful on `/reload`, the pack will announce to all players in chat: "Warp Pads has loaded"
-
-### Latest Release
 1. Click "releases"
 2. Click on the latest release
-3. Under assets, click "Source code (zip)"
-4. Unzip the file into the `[worldname]\datapacks` folder on your server or your Minecraft world (located at `C:\Users\[user]\AppData\Roaming\.minecraft\saves\[worldname]\datapacks` by default in Windows)
-5. Either restart the world or server or run the `/reload` command. If successful on `/reload`, the pack will announce to all players in chat: "Warp Pads has loaded"
+3. Download one of the following ways:
+    1. Under assets, click "WarpPadsvX.X.X.zip" to download the archived data pack. *This file **should not** be unzipped before installation*
+    2. Under assets, click "Source Code (zip)" to download the zipped data pack folder. *This file needs to be unzipped before installation*
+4. Select one of the following methods for installing the data pack:
+
+### Step 2 - Data pack menu (New singleplayer worlds) (Very Easy)
+
+1. In the Singleplayer menu, click "Create New World"
+2. Click "Data Packs"
+3. Drag the downloaded file onto your Minecraft window (toggle fullscreen with F11)
+4. Click "Yes"
+5. Hover over Warp Pads in the menu and click the right arrow to add it to the list of selected data packs
+6. Click "Done" and change any other world options you want
+7. Click "Create New World"
+
+### Step 2 - Manual installation (Existing singleplayer or multiplayer worlds) (Easy)
+
+1. Place the downloaded file into the `[worldname]\datapacks` folder on your server or singleplayer world (located at `C:\Users\[user]\AppData\Roaming\.minecraft\saves\[worldname]\datapacks` by default in Windows)
+2. Either restart the world or server, or run the `/reload` command. If successful on `/reload`, the pack will announce to all players in chat: "Warp Pads has loaded"
+
+At this point, Warp Pads will now be installed in your Minecraft world.
+
+### Step 3 - Updating
+
+1. Follow step 1 to download the latest release
+2. Delete the previous installation (Refer to step 2 for locating this file)
+3. Follow step 2 to installing the new data pack manually
+4. Run `/reload` with a player online to check for any other instructions
 
 ### Support
 
