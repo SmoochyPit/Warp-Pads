@@ -15,7 +15,7 @@
 
 #Tag player if they're a "passenger" (on the warp pad but not using it)
 	tag @e remove wpPassenger
-	execute as @e[tag=warpPad] at @s as @e[distance=..2,tag=!wpUsing,tag=!warpPad,tag=!warpLocIcon,tag=!warpLocTemp] positioned ~-2 ~-.5 ~-2 run tag @s[dx=3,dy=0,dz=3] add wpPassenger
+	execute as @e[tag=warpPad] at @s as @e[distance=..2,tag=!wpUsing,tag=!warpPad,tag=!warpLocIcon,tag=!warpLocTemp,type=!#warppad:nonwarpable] positioned ~-2 ~-.5 ~-2 run tag @s[dx=3,dy=0,dz=3] add wpPassenger
 #For every "passenger", set "passXoffset" and "passZoffset" to the positions relative to the warp pad (still scaled by 10)
 	execute as @e[tag=wpPassenger] store result score @s passXoffset run data get entity @s Pos[0] 10
 	execute as @e[tag=wpPassenger] at @s run scoreboard players operation @s passXoffset -= @e[tag=warpPad,limit=1,sort=nearest] warppadX
