@@ -9,6 +9,13 @@
 	tag @e[tag=warpPad] remove warpInTier1
 	tag @e[tag=warpPad] remove warpInTier2
 	tag @e[tag=warpPad] remove warpInTier3
+	tag @a[tag=wpUsing,tag=!wpIterated,limit=1] remove onWarp1
+	tag @a[tag=wpUsing,tag=!wpIterated,limit=1] remove onWarp2
+	tag @a[tag=wpUsing,tag=!wpIterated,limit=1] remove onWarp3
+#For players and what pad they're on
+	execute as @a[tag=wpUsing,tag=!wpIterated,limit=1] at @s align xyz at @e[tag=warpPad1,dx=0,dy=0,dz=0,limit=1] run tag @s add onWarp1
+	execute as @a[tag=wpUsing,tag=!wpIterated,limit=1] at @s align xyz at @e[tag=warpPad2,dx=0,dy=0,dz=0,limit=1] run tag @s add onWarp2
+	execute as @a[tag=wpUsing,tag=!wpIterated,limit=1] at @s align xyz at @e[tag=warpPad3,dx=0,dy=0,dz=0,limit=1] run tag @s add onWarp3
 
 #Get relative warp pad distances
 #####################################################

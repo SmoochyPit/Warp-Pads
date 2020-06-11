@@ -4,9 +4,6 @@
 	scoreboard players add @s[tag=onWarp1] warpSpam 25
 	scoreboard players add @s[tag=onWarp2] warpSpam 35
 	scoreboard players add @s[tag=onWarp3] warpSpam 1
-	scoreboard players add @s[tag=onNWarp1] warpSpam 25
-	scoreboard players add @s[tag=onNWarp2] warpSpam 35
-	scoreboard players add @s[tag=onNWarp3] warpSpam 1
 
 #Advancements
 	scoreboard players set @s passCount 0
