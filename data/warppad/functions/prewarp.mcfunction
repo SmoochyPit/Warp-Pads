@@ -1,5 +1,7 @@
 #This file runs when a warp pad is active
 
+#Run warppad:setdefaults
+	function warppad:setdefaults
 #Set player UUID scoreboard objectives
 	scoreboard players add @a linkedUUID 0
 
