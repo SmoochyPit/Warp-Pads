@@ -16,8 +16,13 @@
 	execute as @e[scores={wp.spawnAnim=0},type=item,nbt={Item:{id:"minecraft:nether_star",Count:1b}}] at @s if block ~ ~-1 ~ diamond_block run function warppad:creation/new
 
 	execute if entity @e[scores={wp.spawnAnim=1..}] run function warppad:creation/newanim
-	
+
 	execute at @e[tag=wp.pad] unless block ~ ~-1 ~ #warppad:warpblocks run function warppad:creation/del
+
+#Tag warp pads with global.ignore.pos and global.ignore
+
+	tag @e[tag=wp.pad,tag=!global.ignore.pos] add global.ignore.pos
+	tag @e[tag=wp.pad,tag=!global.ignore] add global.ignore
 
 #Run prewarp if any players have wpUsing
     execute if entity @a[tag=wp.using] run function warppad:prewarp
