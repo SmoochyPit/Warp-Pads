@@ -1,8 +1,8 @@
 {
   "values": [
-    "warppad:objectives",
-    "warppad:coolit",
+    "warppad:load",
     "warppad:precreation",
+    "warppad:coolit",
     "warppad:warpspam"
   ]
 }

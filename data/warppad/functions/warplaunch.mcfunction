@@ -1,9 +1,9 @@
 #This file is the reworked teleportation system, which now uses predetermined values instead of a laggy stupid raycast system.
 
 #recursion 102
-	tag @e[tag=warpPad,limit=1,sort=nearest] add wlIterated
+	tag @e[tag=wp.pad,limit=1,sort=nearest] add wp.wlIterated
 
-#warp or retry - note: "warpHasSelect" is a requirement to run, and may break in complicated ways without.
-	execute if score @e[tag=SelCastIcon,limit=1,sort=nearest] warpTempID = @e[tag=warpPad,limit=1,sort=nearest,tag=warpHasSelect] warpTempID as @a[tag=warpPilot,limit=1,sort=nearest] at @s at @e[tag=warpPad,distance=..5] run tag @e[tag=wpPassenger,distance=..5] add wpActivePass
-	execute if score @e[tag=SelCastIcon,limit=1,sort=nearest] warpTempID = @e[tag=warpPad,limit=1,sort=nearest,tag=warpHasSelect] warpTempID at @e[tag=warpPad,limit=1,sort=nearest,tag=warpHasSelect] run function warppad:warpplayers
-	execute if entity @e[tag=warpPad,tag=!wlIterated,limit=1,sort=nearest,tag=warpHasSelect] at @e[tag=warpPad,tag=!wlIterated,limit=1,sort=nearest,tag=warpHasSelect] run function warppad:warplaunch
+#warp or retry - note: "wp.hasSelect" is a requirement to run, and may break in complicated ways without.
+	execute if score @e[tag=wp.selCastIcon,limit=1,sort=nearest] wp.tempID = @e[tag=wp.pad,limit=1,sort=nearest,tag=wp.hasSelect] wp.tempID as @a[tag=wp.pilot,limit=1,sort=nearest] at @s at @e[tag=wp.pad,distance=..5] run tag @e[tag=wp.passenger,distance=..5] add wp.activePass
+	execute if score @e[tag=wp.selCastIcon,limit=1,sort=nearest] wp.tempID = @e[tag=wp.pad,limit=1,sort=nearest,tag=wp.hasSelect] wp.tempID at @e[tag=wp.pad,limit=1,sort=nearest,tag=wp.hasSelect] run function warppad:warpplayers
+	execute if entity @e[tag=wp.pad,tag=!wp.wlIterated,limit=1,sort=nearest,tag=wp.hasSelect] at @e[tag=wp.pad,tag=!wp.wlIterated,limit=1,sort=nearest,tag=wp.hasSelect] run function warppad:warplaunch

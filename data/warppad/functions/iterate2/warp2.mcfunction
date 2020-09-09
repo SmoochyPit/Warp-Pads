@@ -1,10 +1,10 @@
-kill @e[tag=warpLocTemp]
+kill @e[tag=wp.locTemp]
 #If player is on a tier 2 warp pad
 #If found warp pad is level 1
-	execute as @e[tag=!sourcePad,tag=warpPad1,tag=!warpPadIterated,limit=1,sort=nearest,tag=warpInTier1] run function warppad:iconalign
-	execute run tag @e[tag=!sourcePad,tag=warpPad1,limit=1,sort=nearest,tag=warpInTier1,tag=!warpPadIterated] add warpPadIterated
-	execute if entity @e[tag=!sourcePad,tag=warpPad1,tag=warpInTier1,tag=!warpPadIterated] run function warppad:iterate2/warp2
+	execute as @e[tag=!wp.sourcePad,tag=wp.pad1,tag=!wp.padIterated,limit=1,sort=nearest,tag=wp.inTier1] run function warppad:iconalign
+	execute run tag @e[tag=!wp.sourcePad,tag=wp.pad1,limit=1,sort=nearest,tag=wp.inTier1,tag=!wp.padIterated] add wp.padIterated
+	execute if entity @e[tag=!wp.sourcePad,tag=wp.pad1,tag=wp.inTier1,tag=!wp.padIterated] run function warppad:iterate2/warp2
 #If found warp pad is level 2 or 3
-	execute as @e[tag=!sourcePad,tag=warpPadPlus,tag=!warpPadIterated,limit=1,sort=nearest,tag=warpInTier2] run function warppad:iconalign
-	execute run tag @e[tag=!sourcePad,tag=warpPadPlus,limit=1,sort=nearest,tag=warpInTier2,tag=!warpPadIterated] add warpPadIterated
-	execute if entity @e[tag=!sourcePad,tag=warpPadPlus,tag=warpInTier2,tag=!warpPadIterated] run function warppad:iterate2/warp2
+	execute as @e[tag=!wp.sourcePad,tag=wp.padPlus,tag=!wp.padIterated,limit=1,sort=nearest,tag=wp.inTier2] run function warppad:iconalign
+	execute run tag @e[tag=!wp.sourcePad,tag=wp.padPlus,limit=1,sort=nearest,tag=wp.inTier2,tag=!wp.padIterated] add wp.padIterated
+	execute if entity @e[tag=!wp.sourcePad,tag=wp.padPlus,tag=wp.inTier2,tag=!wp.padIterated] run function warppad:iterate2/warp2
