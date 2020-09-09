@@ -5,8 +5,6 @@
 	execute align xyz at @e[type=item,limit=1,sort=nearest,dx=0,dy=0,dz=0] if data entity @e[type=item,nbt={Item:{id:"minecraft:paper",Count:1b}},limit=1,sort=nearest,distance=..0.1] Item.tag.display.Name store success score @s wp.modSucc run data modify entity @s CustomName set from entity @e[type=item,limit=1,sort=nearest,distance=..0.1] Item.tag.display.Name
 	execute align xyz if score @s wp.modSucc matches 1 at @e[type=item,limit=1,sort=nearest,dx=0,dy=0,dz=0] run particle witch ~ ~ ~ 0 0 0 0.2 25
 	execute align xyz if score @s wp.modSucc matches 1 run advancement grant @a[distance=..8,advancements={warppad:warprename=false}] only warppad:warprename
-	execute align xyz if score @s wp.modSucc matches 1 if entity @s[nbt={CustomName:'{"text":"Karen"}'}] run advancement grant @a[distance=..8,advancements={warppad:renamekaren=false}] only warppad:renamekaren
-	execute align xyz if score @s wp.modSucc matches 1 if entity @s[nbt={CustomName:'{"text":"Kevin"}'}] run advancement grant @a[distance=..8,advancements={warppad:renamekaren=false}] only warppad:renamekaren
 	execute align xyz if score @s wp.modSucc matches 1 run kill @e[type=item,limit=1,sort=nearest,dx=0,dy=0,dz=0]
 
 #Changes each warp pad's color based on what item is thrown on them
