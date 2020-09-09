@@ -1,9 +1,9 @@
 #Not just yet, though.
 	scoreboard players set @s wp.cooldown 3
 	tag @a[scores={wp.cooldown=1..}] remove wp.using
-	scoreboard players add @s[tag=wp.onWarp1] wp.spam 25
-	scoreboard players add @s[tag=wp.onWarp2] wp.spam 35
-	scoreboard players add @s[tag=wp.onWarp3] wp.spam 1
+	scoreboard players add @s[tag=wp.onTier1] wp.spam 25
+	scoreboard players add @s[tag=wp.onTier2] wp.spam 35
+	scoreboard players add @s[tag=wp.onTier3] wp.spam 1
 
 #Advancements
 	scoreboard players set @s wp.passCount 0
