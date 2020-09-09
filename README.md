@@ -106,12 +106,16 @@ At this point, Warp Pads will now be installed in your Minecraft world.
 
 1. Follow step 1 to download the latest release
 2. Delete the previous installation (Refer to step 2 for locating this file)
-3. Follow step 2 to installing the new data pack manually
-4. Run `/reload` with a player online to check for any other instructions
+3. Follow step 2 to install the new data pack manually
+4. Run `/reload` with a player online to check for any errors
 
 ### Support
 
-Supports Minecraft: Java Edition 1.16. A legacy version supporting Minecraft 1.14.4-1.15.2 can be found [here](https://github.com/SmoochyPit/Warp-Pads/tree/legacy).
+Supports Minecraft: Java Edition 1.16-1.16.3. A legacy version supporting Minecraft 1.14.4-1.15.2 can be found [here](https://github.com/SmoochyPit/Warp-Pads/tree/legacy).
+
+### Uninstalling
+
+To uninstall, run `/function warppad:setup/uninstall`. Then disable or remove the data pack from the world.
 
 ## Credits
 

@@ -26,4 +26,12 @@ scoreboard objectives remove wp.dist45
 scoreboard objectives remove wp.dist60
 scoreboard objectives remove wp.dist75
 
-tellraw @a {"text":"Warp Pads has been uninstalled successfully. Remove from data packs folder before reloading.","color":"green"}
+tag @a remove wp.noIterate
+tag @a remove wp.onTier1
+tag @a remove wp.onTier2
+tag @a remove wp.onTier3
+tag @a remove wp.pilot
+tag @a remove wp.selCast
+tag @a remove wp.wsIterated
+
+tellraw @a {"text":"Warp Pads has been uninstalled successfully. Disable or remove from data packs folder before reloading.","color":"green"}
