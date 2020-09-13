@@ -23,8 +23,8 @@
 	execute as @e[tag=wp.passenger] at @s run scoreboard players operation @s wp.passXoffset -= @e[tag=wp.pad,limit=1,sort=nearest] wp.padX
 	execute as @e[tag=wp.passenger] store result score @s wp.passZoffset run data get entity @s Pos[2] 10
 	execute as @e[tag=wp.passenger] at @s run scoreboard players operation @s wp.passZoffset -= @e[tag=wp.pad,limit=1,sort=nearest] wp.padZ
-	scoreboard players reset @e[tag=!wp.passenger] wp.passXoffset
-	scoreboard players reset @e[tag=!wp.passenger] wp.passZoffset
+	scoreboard players reset @e[tag=!wp.passenger,tag=!global.ignore] wp.passXoffset
+	scoreboard players reset @e[tag=!wp.passenger,tag=!global.ignore] wp.passZoffset
 
 #Places the markers in the direction of other warp pads. -- warpHasSelect is when a warp has been assigned an id
 	tag @a remove wp.noIterate

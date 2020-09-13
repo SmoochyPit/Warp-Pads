@@ -1,19 +1,19 @@
 #This file runs every tick -- Use with caution!
 
 #Tag player if they're using a warp pad
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ gold_block run tag @s add wp.using
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ emerald_block run tag @s add wp.using
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ diamond_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ gold_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ emerald_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ diamond_block run tag @s add wp.using
 	execute as @a[tag=wp.using] at @s align xyz unless entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run tag @s remove wp.using
 
 #Run if a warp pad has an item on it
-	scoreboard players add @e[type=item] wp.spawnAnim 0
+	scoreboard players add @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] wp.spawnAnim 0
 
-	execute at @e[tag=wp.pad] align xyz if entity @e[type=item,dx=0,dy=0,dz=0] run function warppad:precreation
+	execute at @e[tag=wp.pad] align xyz if entity @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,dx=0,dy=0,dz=0] run function warppad:precreation
 
-	execute as @e[scores={wp.spawnAnim=0},type=item,nbt={Item:{id:"minecraft:golden_apple",Count:1b}}] at @s if block ~ ~-1 ~ gold_block run function warppad:creation/new
-	execute as @e[scores={wp.spawnAnim=0},type=item,nbt={Item:{id:"minecraft:ghast_tear",Count:1b}}] at @s if block ~ ~-1 ~ emerald_block run function warppad:creation/new
-	execute as @e[scores={wp.spawnAnim=0},type=item,nbt={Item:{id:"minecraft:nether_star",Count:1b}}] at @s if block ~ ~-1 ~ diamond_block run function warppad:creation/new
+	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:golden_apple",Count:1b}}] at @s if block ~ ~-1 ~ gold_block run function warppad:creation/new
+	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:ghast_tear",Count:1b}}] at @s if block ~ ~-1 ~ emerald_block run function warppad:creation/new
+	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:nether_star",Count:1b}}] at @s if block ~ ~-1 ~ diamond_block run function warppad:creation/new
 
 	execute if entity @e[scores={wp.spawnAnim=1..}] run function warppad:creation/newanim
 
