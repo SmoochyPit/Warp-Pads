@@ -2,4 +2,4 @@
 
 scoreboard players set @a wp.spam 0
 
-schedule function warppad:warpspam 15s
+schedule function warppad:spam/spam 15s

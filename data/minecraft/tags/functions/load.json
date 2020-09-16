@@ -2,7 +2,7 @@
   "values": [
     "warppad:load",
     "warppad:precreation",
-    "warppad:coolit",
-    "warppad:warpspam"
+    "warppad:spam/coolit",
+    "warppad:spam/spam"
   ]
 }
