@@ -28,7 +28,7 @@
     execute if entity @a[tag=wp.using] run function warppad:prewarp
 
 #Cosmetics
-    execute as @a[tag=wp.using] at @s run function warppad:cosmetics
+    execute as @a[tag=wp.using] at @s run function warppad:cosmetics/cosmetics
 
 #Cooldown message
     execute as @a[tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
