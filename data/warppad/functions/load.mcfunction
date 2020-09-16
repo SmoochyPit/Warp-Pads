@@ -1,4 +1,4 @@
-execute unless entity @e[tag=wp.pad] unless entity @e[tag=warpPad] run function warppad:setup/install
+execute unless entity @e[tag=warpPad] run function warppad:setup/install
 
 #Legacy support
     #If linkedUUIDL objective exists
