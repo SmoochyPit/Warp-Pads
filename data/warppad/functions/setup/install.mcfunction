@@ -25,3 +25,4 @@ scoreboard objectives add wp.dist30 dummy
 scoreboard objectives add wp.dist45 dummy
 scoreboard objectives add wp.dist60 dummy
 scoreboard objectives add wp.dist75 dummy
+scoreboard objectives add wp.guitimer dummy

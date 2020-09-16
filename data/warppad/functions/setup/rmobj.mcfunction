@@ -25,6 +25,7 @@ scoreboard objectives remove wp.dist30
 scoreboard objectives remove wp.dist45
 scoreboard objectives remove wp.dist60
 scoreboard objectives remove wp.dist75
+scoreboard objectives remove wp.guitimer
 
 tag @a remove wp.noIterate
 tag @a remove wp.onTier1
