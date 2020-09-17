@@ -29,17 +29,17 @@
 #Places the markers in the direction of other warp pads. -- warpHasSelect is when a warp has been assigned an id
 	tag @a remove wp.noIterate
 	execute as @a at @s positioned ~-5 ~-5 ~-5 if entity @e[tag=wp.locIcon,dx=10,dy=10,dz=10] run tag @s add wp.noIterate
-	execute if entity @a[tag=wp.using,tag=!wp.noIterate,tag=!wp.iterated] run function warppad:iterate
+	execute if entity @a[tag=wp.using,tag=!wp.noIterate,tag=!wp.iterated] run function warppad:iterate/iterate
 
 #Unselect any selected icons
 	tag @e remove wp.selCastIcon
 
 #Selects the marker if the player is looking at it
-	execute as @a[tag=wp.using] at @s run function warppad:warpselect
+	execute as @a[tag=wp.using] at @s run function warppad:selection/select
 
 #Goes through every player who needs to teleport and flags them and their passengers as needing to teleport, then looks for the warp pad with the matching ID and teleports them. Finally, passengers regain their offset.
 	tag @e remove wp.wsIterated
 	tag @e remove wp.pilot
 	tag @e remove wp.wlIterated
 	tag @e remove wp.activePass
-	execute as @a[tag=wp.using,scores={wp.sneakClick=1..}] at @s at @e[tag=wp.pad,limit=1,sort=nearest] positioned ~-5 ~-5 ~-5 if entity @e[tag=wp.selCastIcon,dx=10,dy=10,dz=10] positioned ~5 ~5 ~5 run function warppad:warpsetup
+	execute as @a[tag=wp.using,scores={wp.sneakClick=1..}] at @s at @e[tag=wp.pad,limit=1,sort=nearest] positioned ~-5 ~-5 ~-5 if entity @e[tag=wp.selCastIcon,dx=10,dy=10,dz=10] positioned ~5 ~5 ~5 run function warppad:warping/setup

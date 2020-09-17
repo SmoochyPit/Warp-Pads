@@ -12,6 +12,6 @@
 
 #Tag for currently selected icon
 	tag @e[distance=..5] remove wp.selCastIcon
-	execute as @e[tag=wp.selTrace] at @s run function warppad:warpselectcast
+	execute as @e[tag=wp.selTrace] at @s run function warppad:selection/cast
 	tp @e[tag=wp.selTrace] ~ -1000 ~
 	kill @e[tag=wp.selTrace]

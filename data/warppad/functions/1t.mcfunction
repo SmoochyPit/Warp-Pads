@@ -9,7 +9,7 @@
 #Run if a warp pad has an item on it
 	scoreboard players add @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] wp.spawnAnim 0
 
-	execute at @e[tag=wp.pad] align xyz if entity @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,dx=0,dy=0,dz=0] run function warppad:precreation
+	execute at @e[tag=wp.pad] align xyz if entity @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,dx=0,dy=0,dz=0] run function warppad:creation/precreation
 
 	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:golden_apple",Count:1b}}] at @s if block ~ ~-1 ~ gold_block run function warppad:creation/new
 	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:ghast_tear",Count:1b}}] at @s if block ~ ~-1 ~ emerald_block run function warppad:creation/new
@@ -25,7 +25,7 @@
 	tag @e[tag=wp.pad,tag=!global.ignore] add global.ignore
 
 #Run prewarp if any players have wpUsing
-    execute if entity @a[tag=wp.using] run function warppad:prewarp
+    execute if entity @a[tag=wp.using] run function warppad:activewarp
 
 #Cosmetics
     execute as @a[tag=wp.using] at @s run function warppad:cosmetics/cosmetics

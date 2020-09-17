@@ -128,10 +128,10 @@
 	tag @e remove wp.padIterated
 	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s as @e[tag=wp.sourcePad,distance=..1,limit=1] unless entity @s[tag=wp.hasSelect] run scoreboard players set @e[tag=wp.sourcePad,distance=..1,limit=1] wp.tempID 1
 	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s as @e[tag=wp.sourcePad,distance=..1,limit=1] unless entity @s[tag=wp.hasSelect] run tag @s add wp.hasSelect
-	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s if entity @e[tag=wp.pad,distance=..1] at @e[tag=wp.pad1,distance=..1,limit=1] run function warppad:iterate2/warp1
-	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s if entity @e[tag=wp.pad,distance=..1] at @e[tag=wp.pad2,distance=..1,limit=1] run function warppad:iterate2/warp2
-	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s if entity @e[tag=wp.pad,distance=..1] at @e[tag=wp.pad3,distance=..1,limit=1] run function warppad:iterate2/warp3
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s if entity @e[tag=wp.pad,distance=..1] at @e[tag=wp.pad1,distance=..1,limit=1] run function warppad:iterate/warp1
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s if entity @e[tag=wp.pad,distance=..1] at @e[tag=wp.pad2,distance=..1,limit=1] run function warppad:iterate/warp2
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s if entity @e[tag=wp.pad,distance=..1] at @e[tag=wp.pad3,distance=..1,limit=1] run function warppad:iterate/warp3
 	tag @a[tag=wp.using,tag=!wp.iterated,limit=1] add wp.iterated
 
 #Again for each player who needs it fam
-	execute if entity @a[tag=wp.using,tag=!wp.iterated] run function warppad:iterate
+	execute if entity @a[tag=wp.using,tag=!wp.iterated] run function warppad:iterate/iterate
