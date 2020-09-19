@@ -1,6 +1,6 @@
 #This file runs when a warp pad is active
 
-#Run warppad:setdefaults
+#Run smoochypit:warppad/setup/defaults
 	function smoochypit:warppad/setup/defaults
 #Set player UUID scoreboard objectives
 	scoreboard players add @a wp.linkedUUID 0

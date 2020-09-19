@@ -8,13 +8,13 @@
 #Advancements
 	scoreboard players set @s wp.passCount 0
 	execute at @a[tag=wp.activePass] run scoreboard players add @s wp.passCount 1
-	execute if score @s wp.passCount matches 4.. run advancement grant @s[tag=wp.pilot,advancements={warppad:warpgroup=false}] only warppad:warpgroup
-	execute if entity @e[type=creeper,tag=wp.activePass] run advancement grant @s[tag=wp.pilot,advancements={warppad:warpcreep=false}] only warppad:warpcreep
-	execute if entity @s[tag=wp.pilot,advancements={warppad:warp50000=false},nbt={SelectedItem:{id:"minecraft:poppy"}}] if entity @e[tag=wp.pad3,distance=..0.1] if entity @s[distance=50000..] run advancement grant @s[tag=wp.pilot] only warppad:warp50000
-	execute unless entity @e[tag=wp.pad,distance=..0.1,scores={wp.linkedUUID=0}] if entity @a[tag=wp.activePass] run advancement grant @s[advancements={warppad:privpass=false}] only warppad:privpass
-	advancement grant @s[tag=wp.pilot,advancements={warppad:warped=false}] only warppad:warped
-	execute if entity @e[type=wolf,tag=wp.activePass] run advancement grant @s[tag=wp.pilot,advancements={warppad:warpdog=false}] only warppad:warpdog
-	advancement grant @a[tag=wp.activePass,advancements={warppad:warppass=false}] only warppad:warppass
+	execute if score @s wp.passCount matches 4.. run advancement grant @s[tag=wp.pilot,advancements={smoochypit:warppad/warpgroup=false}] only smoochypit:warppad/warpgroup
+	execute if entity @e[type=creeper,tag=wp.activePass] run advancement grant @s[tag=wp.pilot,advancements={smoochypit:warppad/warpcreep=false}] only smoochypit:warppad/warpcreep
+	execute if entity @s[tag=wp.pilot,advancements={smoochypit:warppad/warp50000=false},nbt={SelectedItem:{id:"minecraft:poppy"}}] if entity @e[tag=wp.pad3,distance=..0.1] if entity @s[distance=50000..] run advancement grant @s[tag=wp.pilot] only smoochypit:warppad/warp50000
+	execute unless entity @e[tag=wp.pad,distance=..0.1,scores={wp.linkedUUID=0}] if entity @a[tag=wp.activePass] run advancement grant @s[advancements={smoochypit:warppad/privpass=false}] only smoochypit:warppad/privpass
+	advancement grant @s[tag=wp.pilot,advancements={smoochypit:warppad/warped=false}] only smoochypit:warppad/warped
+	execute if entity @e[type=wolf,tag=wp.activePass] run advancement grant @s[tag=wp.pilot,advancements={smoochypit:warppad/warpdog=false}] only smoochypit:warppad/warpdog
+	advancement grant @a[tag=wp.activePass,advancements={smoochypit:warppad/warppass=false}] only smoochypit:warppad/warppass
 
 #Teleport the "pilot"
 	tp @s[tag=wp.pilot] ~ ~-0.5 ~
