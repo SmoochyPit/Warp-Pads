@@ -20,5 +20,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "warppad:warppass"
+    "parent": "smoochypit:warppad/actions/passenger"
 }

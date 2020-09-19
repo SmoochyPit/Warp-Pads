@@ -20,5 +20,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "warppad:warpfreq"
+    "parent": "smoochypit:warppad/mods/freq"
 }

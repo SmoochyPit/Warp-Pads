@@ -20,5 +20,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "warppad:warppad1"
+    "parent": "smoochypit:warppad/makepad/pad1"
 }

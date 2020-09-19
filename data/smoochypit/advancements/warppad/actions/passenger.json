@@ -20,5 +20,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "warppad:warped"
+    "parent": "smoochypit:warppad/actions/warp"
 }

@@ -20,5 +20,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "warppad:warppriv"
+    "parent": "smoochypit:warppad/mods/private"
 }
