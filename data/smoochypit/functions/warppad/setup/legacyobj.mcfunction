@@ -1,4 +1,4 @@
-function warppad:setup/install
+function smoochypit:warppad/setup/install
 
 execute as @e[tag=warpPad] at @s run scoreboard players operation @s wp.spawnAnim = @s warpSpawnAnim
 #sneakClick
@@ -26,4 +26,4 @@ execute as @e[tag=warpPad] at @s run scoreboard players operation @s wp.streamFr
 #dist60
 #dist75
 
-function warppad:setup/legacyuninst
+function smoochypit:warppad/setup/legacyuninst

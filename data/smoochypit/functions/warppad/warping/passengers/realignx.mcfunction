@@ -6,5 +6,5 @@
 	execute if entity @s[scores={wp.passXoffset=..-1}] run scoreboard players add @s wp.passXoffset 1
 
 #Call it again if they aren't fully aligned yet
-	execute if entity @s[scores={wp.passXoffset=1..}] at @s run function warppad:warping/passengers/realignx
-	execute if entity @s[scores={wp.passXoffset=..-1}] at @s run function warppad:warping/passengers/realignx
+	execute if entity @s[scores={wp.passXoffset=1..}] at @s run function smoochypit:warppad/warping/passengers/realignx
+	execute if entity @s[scores={wp.passXoffset=..-1}] at @s run function smoochypit:warppad/warping/passengers/realignx

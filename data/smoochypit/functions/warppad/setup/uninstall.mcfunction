@@ -2,5 +2,5 @@
 
 #This stuff runs at load.
 
-execute unless entity @e[tag=wp.pad] run function warppad:setup/rmobj
-execute if entity @e[tag=wp.pad] run tellraw @a {"text":"One or more warp pads are still active. To destroy them all, run ","color":"yellow","extra":[{"text":"/function warppad:setup/forceuninstall","color":"red","clickEvent":{"action":"suggest_command","value":"/function warppad:setup/forceuninstall"}}]}
+execute unless entity @e[tag=wp.pad] run function smoochypit:warppad/setup/rmobj
+execute if entity @e[tag=wp.pad] run tellraw @a {"text":"One or more warp pads are still active. To destroy them all, run ","color":"yellow","extra":[{"text":"/function smoochypit:warppad/setup/forceuninstall","color":"red","clickEvent":{"action":"suggest_command","value":"/function smoochypit:warppad/setup/forceuninstall"}}]}

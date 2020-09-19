@@ -6,7 +6,7 @@
 #Positions that armor stand
 	execute at @e[tag=wp.locTemp] run tp @e[tag=wp.locTemp,limit=1] ~ ~ ~ facing entity @s
 	execute as @e[tag=wp.locTemp] at @s run tp @s ^ ^ ^2
-	execute as @e[tag=wp.locTemp] at @s unless block ~ ~ ~ #warppad:air run function warppad:iterate/iconalignback
+	execute as @e[tag=wp.locTemp] at @s unless block ~ ~ ~ #warppad:air run function smoochypit:warppad/iterate/iconalignback
 
 #Summon wp.locIcon- Creates an Armor Stand that can indicates direction for the user.
 	execute at @e[tag=wp.locTemp,limit=1] run summon armor_stand ~ ~ ~ {Marker:true,NoGravity:true,Invisible:true,Tags:["wp.locIcon"]}

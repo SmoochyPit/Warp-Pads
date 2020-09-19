@@ -1,9 +1,5 @@
 {
   "values": [
-    "warppad:load",
-    "warppad:precreation",
-    "warppad:spam/coolit",
-    "warppad:spam/spam",
-    "warppad:creation/warpmod/rmnogui"
+    "#smoochypit:warppad/load"
   ]
 }

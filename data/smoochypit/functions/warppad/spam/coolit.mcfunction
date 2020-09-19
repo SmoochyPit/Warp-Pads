@@ -13,4 +13,4 @@
 	scoreboard players set @a[scores={wp.spam=100..}] wp.spam 0
 	scoreboard players set @a[gamemode=creative] wp.spam 0
 
-schedule function warppad:spam/coolit 5t
+schedule function smoochypit:warppad/spam/coolit 5t

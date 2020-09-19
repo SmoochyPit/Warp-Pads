@@ -9,15 +9,15 @@
 #Run if a warp pad has an item on it
 	scoreboard players add @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] wp.spawnAnim 0
 
-	execute at @e[tag=wp.pad] align xyz if entity @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,dx=0,dy=0,dz=0] run function warppad:creation/precreation
+	execute at @e[tag=wp.pad] align xyz if entity @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,dx=0,dy=0,dz=0] run function smoochypit:warppad/creation/precreation
 
-	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:golden_apple",Count:1b}}] at @s if block ~ ~-1 ~ gold_block run function warppad:creation/new
-	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:ghast_tear",Count:1b}}] at @s if block ~ ~-1 ~ emerald_block run function warppad:creation/new
-	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:nether_star",Count:1b}}] at @s if block ~ ~-1 ~ diamond_block run function warppad:creation/new
+	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:golden_apple",Count:1b}}] at @s if block ~ ~-1 ~ gold_block run function smoochypit:warppad/creation/new
+	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:ghast_tear",Count:1b}}] at @s if block ~ ~-1 ~ emerald_block run function smoochypit:warppad/creation/new
+	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:nether_star",Count:1b}}] at @s if block ~ ~-1 ~ diamond_block run function smoochypit:warppad/creation/new
 
-	execute if entity @e[scores={wp.spawnAnim=1..}] run function warppad:creation/newanim
+	execute if entity @e[scores={wp.spawnAnim=1..}] run function smoochypit:warppad/creation/newanim
 
-	execute at @e[tag=wp.pad] unless block ~ ~-1 ~ #warppad:warpblocks run function warppad:creation/del
+	execute at @e[tag=wp.pad] unless block ~ ~-1 ~ #warppad:warpblocks run function smoochypit:warppad/creation/del
 
 #Tag warp pads with global.ignore.pos and global.ignore
 
@@ -25,10 +25,10 @@
 	tag @e[tag=wp.pad,tag=!global.ignore] add global.ignore
 
 #Run prewarp if any players have wpUsing
-    execute if entity @a[tag=wp.using] run function warppad:activewarp
+    execute if entity @a[tag=wp.using] run function smoochypit:warppad/activewarp
 
 #Cosmetics
-    execute as @a[tag=wp.using] at @s run function warppad:cosmetics/cosmetics
+    execute as @a[tag=wp.using] at @s run function smoochypit:warppad/cosmetics/cosmetics
 
 #Cooldown message
     execute as @a[tag=!global.ignore,tag=!global.ignore.gui,tag=wp.spamHalt,scores={wp.guitimer=0}] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}

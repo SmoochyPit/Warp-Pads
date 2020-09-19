@@ -24,7 +24,7 @@
 
 #Teleport and align each "passenger"
 	tp @e[tag=wp.activePass] ~ ~-0.5 ~
-	execute as @e[tag=wp.activePass,scores={wp.passXoffset=..-1}] at @s run function warppad:warping/passengers/realignx
-	execute as @e[tag=wp.activePass,scores={wp.passXoffset=1..}] at @s run function warppad:warping/passengers/realignx
-	execute as @e[tag=wp.activePass,scores={wp.passZoffset=..-1}] at @s run function warppad:warping/passengers/realignz
-	execute as @e[tag=wp.activePass,scores={wp.passZoffset=1..}] at @s run function warppad:warping/passengers/realignz
+	execute as @e[tag=wp.activePass,scores={wp.passXoffset=..-1}] at @s run function smoochypit:warppad/warping/passengers/realignx
+	execute as @e[tag=wp.activePass,scores={wp.passXoffset=1..}] at @s run function smoochypit:warppad/warping/passengers/realignx
+	execute as @e[tag=wp.activePass,scores={wp.passZoffset=..-1}] at @s run function smoochypit:warppad/warping/passengers/realignz
+	execute as @e[tag=wp.activePass,scores={wp.passZoffset=1..}] at @s run function smoochypit:warppad/warping/passengers/realignz
