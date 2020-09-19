@@ -4,17 +4,13 @@
 	scoreboard players add @e[tag=!global.ignore,scores={wp.spawnAnim=1..}] wp.spawnAnim 1
 	scoreboard players set @e[tag=!global.ignore,scores={wp.spawnAnim=100..}] wp.spawnAnim 0
 
-#Safe guard
-	scoreboard players reset @e[tag=global.ignore,scores={wp.spawnAnim=1..}] wp.spawnAnim
-	scoreboard players reset @e[tag=global.ignore.kill,scores={wp.spawnAnim=1..}] wp.spawnAnim
-
 #If blocks are broken
 	execute as @e[scores={wp.spawnAnim=1..}] at @s unless block ~ ~-1 ~ #smoochypit:warppad/warpblocks run scoreboard players set @s wp.spawnAnim 0
 
 #Tag secondary items
-	tag @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] remove wp.quartz4
-	tag @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] remove wp.phantom_membrane4
-	tag @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] remove wp.ender_eye4
+	tag @e remove wp.quartz4
+	tag @e remove wp.phantom_membrane4
+	tag @e remove wp.ender_eye4
 	tag @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:quartz",Count:4b}}] add wp.quartz4
 	tag @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:phantom_membrane",Count:4b}}] add wp.phantom_membrane4
 	tag @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:ender_eye",Count:4b}}] add wp.ender_eye4
