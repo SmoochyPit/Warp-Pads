@@ -49,3 +49,5 @@
 
 #Resets "sneakClick" so that if the player isn't sneaking in the next tick, it won't be active.
 	scoreboard players set @a wp.sneakClick 0
+
+schedule function #smoochypit:warppad/tick 1t

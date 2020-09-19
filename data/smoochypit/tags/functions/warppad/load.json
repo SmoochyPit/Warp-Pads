@@ -4,6 +4,7 @@
       "smoochypit:warppad/creation/precreation",
       "smoochypit:warppad/spam/coolit",
       "smoochypit:warppad/spam/spam",
-      "smoochypit:warppad/creation/warpmod/rmnogui"
+      "smoochypit:warppad/creation/warpmod/rmnogui",
+      "#smoochypit:warppad/tick"
     ]
 }

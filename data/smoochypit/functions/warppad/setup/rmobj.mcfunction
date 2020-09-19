@@ -1,5 +1,10 @@
 #Remove all objectives
 
+schedule clear #smoochypit:warppad/tick
+schedule clear smoochypit:warppad/creation/warpmod/rmnogui
+schedule clear smoochypit:warppad/spam/coolit
+schedule clear smoochypit:warppad/spam/spam
+
 scoreboard objectives remove wp.spawnAnim
 scoreboard objectives remove wp.sneakClick
 scoreboard objectives remove wp.tempID
