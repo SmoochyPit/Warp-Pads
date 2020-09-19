@@ -1,0 +1,11 @@
+#For level 1 warp pad
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s align xyz at @e[tag=!wp.endWarp,tag=wp.netherWarp,tag=wp.pad1,dx=0,dy=0,dz=0,limit=1] run tag @e[tag=wp.pad,scores={wp.distX=..1250,wp.distZ=..1250,wp.dist45=..1768,wp.dist30=..1444,wp.dist60=..2500,wp.dist15=..1295,wp.dist75=..4830},tag=wp.netherWarp,tag=!wp.endWarp] add wp.inTier1
+
+#For level 2 warp pad
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s align xyz at @e[tag=!wp.endWarp,tag=wp.netherWarp,tag=wp.pad2,dx=0,dy=0,dz=0,limit=1] run tag @e[tag=wp.padPlus,scores={wp.distX=..6250,wp.distZ=..6250,wp.dist45=..8839,wp.dist30=..7217,wp.dist60=..12500,wp.dist15=..6471,wp.dist75=..24149},tag=wp.netherWarp,tag=!wp.endWarp] add wp.inTier2
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s align xyz at @e[tag=!wp.endWarp,tag=wp.netherWarp,tag=wp.pad2,dx=0,dy=0,dz=0,limit=1] run tag @e[tag=wp.pad1,scores={wp.distX=..1250,wp.distZ=..1250,wp.dist45=..1768,wp.dist30=..1444,wp.dist60=..2500,wp.dist15=..1295,wp.dist75=..4830},tag=wp.netherWarp,tag=!wp.endWarp] add wp.inTier1
+
+#For level 3 warp pad
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s align xyz at @e[tag=!wp.endWarp,tag=wp.netherWarp,tag=wp.pad3,dx=0,dy=0,dz=0,limit=1] run tag @e[tag=wp.pad3,tag=wp.netherWarp,tag=!wp.endWarp] add wp.inTier3
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s align xyz at @e[tag=!wp.endWarp,tag=wp.netherWarp,tag=wp.pad3,dx=0,dy=0,dz=0,limit=1] run tag @e[tag=wp.pad2,scores={wp.distX=..6250,wp.distZ=..6250,wp.dist45=..8839,wp.dist30=..7217,wp.dist60=..12500,wp.dist15=..6471,wp.dist75=..24149},tag=wp.netherWarp,tag=!wp.endWarp] add wp.inTier2
+	execute as @a[tag=wp.using,tag=!wp.iterated,limit=1] at @s align xyz at @e[tag=!wp.endWarp,tag=wp.netherWarp,tag=wp.pad3,dx=0,dy=0,dz=0,limit=1] run tag @e[tag=wp.pad1,scores={wp.distX=..1250,wp.distZ=..1250,wp.dist45=..1768,wp.dist30=..1444,wp.dist60=..2500,wp.dist15=..1295,wp.dist75=..4830},tag=wp.netherWarp,tag=!wp.endWarp] add wp.inTier1

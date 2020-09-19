@@ -29,7 +29,7 @@
 #Places the markers in the direction of other warp pads. -- warpHasSelect is when a warp has been assigned an id
 	tag @a remove wp.noIterate
 	execute as @a at @s positioned ~-5 ~-5 ~-5 if entity @e[tag=wp.locIcon,dx=10,dy=10,dz=10] run tag @s add wp.noIterate
-	execute if entity @a[tag=wp.using,tag=!wp.noIterate,tag=!wp.iterated] run function smoochypit:warppad/iterate/iterate
+	execute as @a[tag=wp.using,tag=!wp.noIterate,tag=!wp.iterated,limit=1] at @s align xyz run function smoochypit:warppad/iterate/iterate
 
 #Unselect any selected icons
 	tag @e remove wp.selCastIcon
