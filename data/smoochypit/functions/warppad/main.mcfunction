@@ -1,13 +1,13 @@
 #This file runs every tick -- Use with caution!
 
 #Tag player if they're using a warp pad
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ gold_block run tag @s add wp.using
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ emerald_block run tag @s add wp.using
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ diamond_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ gold_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ emerald_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ diamond_block run tag @s add wp.using
 	execute as @a[tag=wp.using] at @s align xyz unless entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run tag @s remove wp.using
 
 #Run if a warp pad has an item on it
-	scoreboard players add @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] wp.spawnAnim 0
+	scoreboard players add @e[type=item,tag=!global.ignore.kill] wp.spawnAnim 0
 
 	execute at @e[tag=wp.pad] align xyz if entity @e[type=item,tag=!global.ignore,tag=!global.ignore.kill,dx=0,dy=0,dz=0] run function smoochypit:warppad/creation/precreation
 
@@ -21,8 +21,8 @@
 
 #Tag warp pads with global.ignore.pos and global.ignore
 
-	tag @e[tag=wp.pad,tag=!global.ignore.pos] add global.ignore.pos
-	tag @e[tag=wp.pad,tag=!global.ignore] add global.ignore
+	tag @e[tag=wp.pad] add global.ignore.pos
+	tag @e[tag=wp.pad] add global.ignore
 
 #Run prewarp if any players have wpUsing
     execute if entity @a[tag=wp.using] run function smoochypit:warppad/activewarp
@@ -31,10 +31,10 @@
     execute as @a[tag=wp.using] at @s run function smoochypit:warppad/cosmetics/cosmetics
 
 #Cooldown message
-    execute as @a[tag=!global.ignore,tag=!global.ignore.gui,tag=wp.spamHalt,scores={wp.guitimer=0}] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
-	execute as @a[tag=!global.ignore,tag=global.ignore.gui,tag=wp.spamHalt,scores={wp.guitimer=1..}] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
-	execute as @a[tag=!global.ignore,tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run scoreboard players set @s wp.guitimer 1
-	execute as @a[tag=!global.ignore,tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run tag @s add global.ignore.gui
+    execute as @a[tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
+	execute as @a[tag=wp.spamHalt,scores={wp.guitimer=1..}] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
+	execute as @a[tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run scoreboard players set @s wp.guitimer 1
+	execute as @a[tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run tag @s add global.ignore.gui
 
 #Reset ID system if no players are using a warp pad
     execute unless entity @a[tag=wp.using] run tag @e remove wp.hasSelect
