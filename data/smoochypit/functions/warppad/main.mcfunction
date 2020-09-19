@@ -17,7 +17,7 @@
 
 	execute if entity @e[scores={wp.spawnAnim=1..}] run function smoochypit:warppad/creation/newanim
 
-	execute at @e[tag=wp.pad] unless block ~ ~-1 ~ #warppad:warpblocks run function smoochypit:warppad/creation/del
+	execute at @e[tag=wp.pad] unless block ~ ~-1 ~ #smoochypit:warppad/warpblocks run function smoochypit:warppad/creation/del
 
 #Tag warp pads with global.ignore.pos and global.ignore
 

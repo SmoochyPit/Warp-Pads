@@ -9,7 +9,7 @@
 	scoreboard players reset @e[tag=global.ignore.kill,scores={wp.spawnAnim=1..}] wp.spawnAnim
 
 #If blocks are broken
-	execute as @e[scores={wp.spawnAnim=1..}] at @s unless block ~ ~-1 ~ #warppad:warpblocks run scoreboard players set @s wp.spawnAnim 0
+	execute as @e[scores={wp.spawnAnim=1..}] at @s unless block ~ ~-1 ~ #smoochypit:warppad/warpblocks run scoreboard players set @s wp.spawnAnim 0
 
 #Tag secondary items
 	tag @e[type=item,tag=!global.ignore,tag=!global.ignore.kill] remove wp.quartz4
