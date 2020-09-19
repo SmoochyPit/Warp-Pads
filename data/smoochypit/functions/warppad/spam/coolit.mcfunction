@@ -7,7 +7,7 @@
 
 #Punish spamming warp pads
 	tag @a[scores={wp.spam=..100,wp.cooldown=0},tag=wp.spamHalt] remove wp.spamHalt
-	advancement grant @a[scores={wp.spam=100..},advancements={smoochypit:warppad/warpspam=false}] only smoochypit:warppad/warpspam
+	advancement grant @a[scores={wp.spam=100..},advancements={smoochypit:warppad/actions/spam=false}] only smoochypit:warppad/actions/spam
 	tag @a[scores={wp.spam=100..}] add wp.spamHalt
 	scoreboard players set @a[scores={wp.spam=100..}] wp.cooldown 60
 	scoreboard players set @a[scores={wp.spam=100..}] wp.spam 0
