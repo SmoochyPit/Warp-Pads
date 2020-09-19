@@ -1,16 +1,16 @@
-execute if entity @s[scores={wp.anim1time=1}] run particle witch ~ ~-.25 ~2 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=2}] run particle witch ~.77 ~-.25 ~1.85 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=3}] run particle witch ~1.4 ~-.25 ~1.4 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=4}] run particle witch ~1.85 ~-.25 ~.77 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=5}] run particle witch ~2 ~-.25 ~ 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=6}] run particle witch ~1.85 ~-.25 ~-.77 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=7}] run particle witch ~1.4 ~-.25 ~-1.4 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=8}] run particle witch ~-.77 ~-.25 ~1.85 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=1}] run particle witch ~ ~-.25 ~-2 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=2}] run particle witch ~-.77 ~-.25 ~-1.85 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=3}] run particle witch ~-1.4 ~-.25 ~-1.4 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=4}] run particle witch ~-1.85 ~-.25 ~-.77 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=5}] run particle witch ~-2 ~-.25 ~ 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=6}] run particle witch ~-1.85 ~-.25 ~.77 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=7}] run particle witch ~-1.4 ~-.25 ~1.4 0 0 0 0 1 force @a
-execute if entity @s[scores={wp.anim1time=8}] run particle witch ~.77 ~-.25 ~-1.85 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 1 run particle witch ~ ~-.25 ~2 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 2 run particle witch ~.77 ~-.25 ~1.85 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 3 run particle witch ~1.4 ~-.25 ~1.4 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 4 run particle witch ~1.85 ~-.25 ~.77 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 5 run particle witch ~2 ~-.25 ~ 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 6 run particle witch ~1.85 ~-.25 ~-.77 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 7 run particle witch ~1.4 ~-.25 ~-1.4 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 8 run particle witch ~-.77 ~-.25 ~1.85 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 1 run particle witch ~ ~-.25 ~-2 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 2 run particle witch ~-.77 ~-.25 ~-1.85 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 3 run particle witch ~-1.4 ~-.25 ~-1.4 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 4 run particle witch ~-1.85 ~-.25 ~-.77 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 5 run particle witch ~-2 ~-.25 ~ 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 6 run particle witch ~-1.85 ~-.25 ~.77 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 7 run particle witch ~-1.4 ~-.25 ~1.4 0 0 0 0 1 force @a
+execute if score @s wp.anim1time matches 8 run particle witch ~.77 ~-.25 ~-1.85 0 0 0 0 1 force @a
