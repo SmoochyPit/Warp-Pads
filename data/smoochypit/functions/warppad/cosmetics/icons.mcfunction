@@ -1,17 +1,17 @@
-execute if entity @s[scores={wp.iconColor=0}] run particle minecraft:dust 0.75 0 0.75 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=1}] run particle minecraft:dust 1 0 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=2}] run particle minecraft:dust 0 0.4 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=3}] run particle minecraft:dust 0.5 0 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=4}] run particle minecraft:dust 0 0.5 0.5 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=5}] run particle minecraft:dust 0.75 0.75 0.75 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=6}] run particle minecraft:dust 0.25 0.25 0.25 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=7}] run particle minecraft:dust 1 0.5 0.75 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=8}] run particle minecraft:dust 0 0.8 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=9}] run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=10}] run particle minecraft:dust 0.5 0.75 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=11}] run particle minecraft:dust 1 0 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=12}] run particle minecraft:dust 1 0.5 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=13}] run particle minecraft:dust 0 0 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=14}] run particle minecraft:dust 0.5 0.25 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=15}] run particle minecraft:dust 0.1 0.1 0.1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
-execute if entity @s[scores={wp.iconColor=16}] run particle minecraft:dust 1 1 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 0 run particle minecraft:dust 0.75 0 0.75 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 1 run particle minecraft:dust 1 0 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 2 run particle minecraft:dust 0 0.4 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 3 run particle minecraft:dust 0.5 0 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 4 run particle minecraft:dust 0 0.5 0.5 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 5 run particle minecraft:dust 0.75 0.75 0.75 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 6 run particle minecraft:dust 0.25 0.25 0.25 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 7 run particle minecraft:dust 1 0.5 0.75 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 8 run particle minecraft:dust 0 0.8 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 9 run particle minecraft:dust 1 1 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 10 run particle minecraft:dust 0.5 0.75 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 11 run particle minecraft:dust 1 0 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 12 run particle minecraft:dust 1 0.5 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 13 run particle minecraft:dust 0 0 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 14 run particle minecraft:dust 0.5 0.25 0 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 15 run particle minecraft:dust 0.1 0.1 0.1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
+execute if score @s wp.iconColor matches 16 run particle minecraft:dust 1 1 1 0.5 ~ ~ ~ 0 0 0 1 1 force @a
