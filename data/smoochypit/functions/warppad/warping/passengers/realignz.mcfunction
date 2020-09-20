@@ -6,5 +6,5 @@
 	scoreboard players add @s[scores={wp.passZoffset=..-1}] wp.passZoffset 1
 
 #Call it again if they aren't fully aligned yet
-	execute if entity @s[scores={wp.passZoffset=1..}] at @s run function smoochypit:warppad/warping/passengers/realignz
-	execute if entity @s[scores={wp.passZoffset=..-1}] at @s run function smoochypit:warppad/warping/passengers/realignz
+	execute at @s[scores={wp.passZoffset=1..}] run function smoochypit:warppad/warping/passengers/realignz
+	execute at @s[scores={wp.passZoffset=..-1}] run function smoochypit:warppad/warping/passengers/realignz
