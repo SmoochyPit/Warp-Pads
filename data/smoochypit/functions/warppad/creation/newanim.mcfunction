@@ -1,4 +1,5 @@
 #Note: Under normal circumstances, no items with !global.ignore or tag=!global.ignore.kill should have wp.spawnAnim > 0
+#When wp.spawnAnim > 1, it begins the animation. When it reaches 99, it finishes the animation.
 
 #Controls the animation and stuff.
 	scoreboard players add @e[tag=!global.ignore,scores={wp.spawnAnim=1..}] wp.spawnAnim 1
