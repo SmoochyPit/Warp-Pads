@@ -1,0 +1,4 @@
+	execute if block ~ ~-1 ~ gold_block positioned ~ ~-0.5 ~ if entity @e[distance=..0.5,type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:quartz",Count:4b}}] run function smoochypit:warppad/creation/new/pads/pad1
+	execute if block ~ ~-1 ~ emerald_block positioned ~ ~-0.5 ~ if entity @e[distance=..0.5,type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:phantom_membrane",Count:4b}}] run function smoochypit:warppad/creation/new/pads/pad2
+	execute if block ~ ~-1 ~ diamond_block positioned ~ ~-0.5 ~ if entity @e[distance=..0.5,type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:ender_eye",Count:4b}}] run function smoochypit:warppad/creation/new/pads/pad3
+	tag @s[scores={wp.spawnAnim=1}] add wp.spawnAnimating

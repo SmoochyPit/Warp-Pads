@@ -2,6 +2,8 @@
 
 Warp Pads is a data pack for Minecraft: Java Edition enabling players to create and teleport between warp pads in the world. It is designed to be balanced for survival Minecraft, but beneficial for players in all game modes.
 
+Warp Pads follows the Minecraft Datapacks [Official Conventions and Style](https://mc-datapacks.github.io/en/).
+
 ## About
 
 ### Features
@@ -14,7 +16,7 @@ Warp Pads is a data pack for Minecraft: Java Edition enabling players to create 
     * Warp pad labeling
     * Warp pad indicator colors
     * Warp pad decoration
-* Very low performance impact
+* Fairly low performance impact
 * Custom advancements
 * Warp stream frequencies for extra organization
 * No constant cooldowns or long animations

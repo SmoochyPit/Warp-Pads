@@ -1,0 +1,1 @@
+    execute as @e[tag=wp.pad1,tag=wp.legacyPrivPad] at @s unless block ~ ~-1 ~ gold_block run function smoochypit:warppad/creation/del/legacy_pad

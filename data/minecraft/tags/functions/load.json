@@ -1,8 +1,5 @@
 {
   "values": [
-    "warppad:load",
-    "warppad:precreation",
-    "warppad:coolit",
-    "warppad:warpspam"
+    "#smoochypit:warppad/load"
   ]
 }

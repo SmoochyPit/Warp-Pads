@@ -1,0 +1,1 @@
+	execute align xyz positioned ~0.5 ~0.5 ~0.5 unless entity @e[distance=..2.9,tag=wp.pad] unless entity @e[distance=..2.9,scores={wp.spawnAnim=1..}] run function smoochypit:warppad/creation/new/perpad
