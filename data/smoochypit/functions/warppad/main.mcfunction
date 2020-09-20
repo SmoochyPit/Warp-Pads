@@ -14,8 +14,10 @@
 	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:golden_apple",Count:1b}}] at @s if block ~ ~-1 ~ gold_block run function smoochypit:warppad/creation/new
 	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:ghast_tear",Count:1b}}] at @s if block ~ ~-1 ~ emerald_block run function smoochypit:warppad/creation/new
 	execute as @e[scores={wp.spawnAnim=0},type=item,tag=!global.ignore,tag=!global.ignore.kill,nbt={Item:{id:"minecraft:nether_star",Count:1b}}] at @s if block ~ ~-1 ~ diamond_block run function smoochypit:warppad/creation/new
+#Tag items if they match criteria
+	execute if entity @e[tag=wp.spawnAnimating] run function smoochypit:warppad/creation/newanim/tagsecondary
 
-	execute if entity @e[scores={wp.spawnAnim=1..}] run function smoochypit:warppad/creation/newanim
+	execute as @e[tag=wp.spawnAnimating] at @s run function smoochypit:warppad/creation/newanim
 
 	execute at @e[tag=wp.pad] unless block ~ ~-1 ~ #smoochypit:warppad/warpblocks run function smoochypit:warppad/creation/del
 
