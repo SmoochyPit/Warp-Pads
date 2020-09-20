@@ -31,10 +31,9 @@
     execute as @a[tag=wp.using] at @s run function smoochypit:warppad/cosmetics/cosmetics
 
 #Cooldown message
-    execute as @a[tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
-	execute as @a[tag=wp.spamHalt,scores={wp.guitimer=1..}] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
 	execute as @a[tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run scoreboard players set @s wp.guitimer 1
 	execute as @a[tag=!global.ignore.gui,tag=wp.spamHalt] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run tag @s add global.ignore.gui
+	execute as @a[tag=wp.spamHalt,scores={wp.guitimer=1..}] at @s align xyz if entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run title @s actionbar {"text":"You've warped too fast. Please wait...","color":"red"}
 
 #Reset ID system if no players are using a warp pad
     execute unless entity @a[tag=wp.using] run tag @e remove wp.hasSelect
