@@ -42,4 +42,4 @@
 	tag @s add wp.iterated
 
 #Again for each player who needs it fam
-	execute as @a[tag=wp.using,tag=!wp.iterated,tag=!wp.noIterate,limit=1] at @s align xyz run function smoochypit:warppad/iterate/iterate
+	execute as @p[tag=wp.using,tag=!wp.iterated,tag=!wp.noIterate] at @s align xyz run function smoochypit:warppad/iterate/iterate
