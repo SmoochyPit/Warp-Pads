@@ -23,9 +23,9 @@
 	function smoochypit:warppad/iterate/dimension
 
 #Remove private warp pads if their UUID doesn't match that of the player
-	execute as @e[tag=wp.pad,tag=wp.inTier1] unless score @s wp.linkedUUID matches 0 unless score @s wp.linkedUUID = @e[tag=wp.sourcePad,limit=1] wp.linkedUUID run tag @s remove wp.inTier1
-	execute as @e[tag=wp.pad,tag=wp.inTier2] unless score @s wp.linkedUUID matches 0 unless score @s wp.linkedUUID = @e[tag=wp.sourcePad,limit=1] wp.linkedUUID run tag @s remove wp.inTier2
-	execute as @e[tag=wp.pad,tag=wp.inTier3] unless score @s wp.linkedUUID matches 0 unless score @s wp.linkedUUID = @e[tag=wp.sourcePad,limit=1] wp.linkedUUID run tag @s remove wp.inTier3
+	execute as @e[tag=wp.pad,tag=wp.inTier1] unless score @s wp.linkedUUID matches 0 unless score @s wp.linkedUUID = @p[tag=wp.using] wp.linkedUUID run tag @s remove wp.inTier1
+	execute as @e[tag=wp.pad,tag=wp.inTier2] unless score @s wp.linkedUUID matches 0 unless score @s wp.linkedUUID = @p[tag=wp.using] wp.linkedUUID run tag @s remove wp.inTier2
+	execute as @e[tag=wp.pad,tag=wp.inTier3] unless score @s wp.linkedUUID matches 0 unless score @s wp.linkedUUID = @p[tag=wp.using] wp.linkedUUID run tag @s remove wp.inTier3
 
 #Remove warp pads with different frequencies
 	execute as @e[tag=wp.pad,tag=wp.inTier1] unless score @s wp.streamFreq = @e[tag=wp.sourcePad,limit=1] wp.streamFreq run tag @s remove wp.inTier1
