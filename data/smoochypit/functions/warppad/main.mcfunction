@@ -1,9 +1,9 @@
 #This file runs every tick -- Use with caution!
 
 #Tag player if they're using a warp pad
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ gold_block run tag @s add wp.using
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ emerald_block run tag @s add wp.using
-	execute as @e[tag=wp.pad] at @s align xyz as @a[dx=0,dy=0,dz=0,tag=!global.ignore.pos,limit=1,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ diamond_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @p[dx=0,dy=0,dz=0,tag=!global.ignore.pos,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ gold_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @p[dx=0,dy=0,dz=0,tag=!global.ignore.pos,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ emerald_block run tag @s add wp.using
+	execute as @e[tag=wp.pad] at @s align xyz as @p[dx=0,dy=0,dz=0,tag=!global.ignore.pos,scores={wp.cooldown=0}] at @s unless entity @a[tag=wp.using,distance=..4] if block ~ ~-1 ~ diamond_block run tag @s add wp.using
 	execute as @a[tag=wp.using] at @s align xyz unless entity @e[tag=wp.pad,dx=0,dy=0,dz=0] run tag @s remove wp.using
 
 #Run if a warp pad has an item on it
