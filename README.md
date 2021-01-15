@@ -113,7 +113,7 @@ At this point, Warp Pads will now be installed in your Minecraft world.
 
 ### Support
 
-Supports Minecraft: Java Edition 1.16-1.16.3. A legacy version supporting Minecraft 1.14.4-1.15.2 can be found [here](https://github.com/SmoochyPit/Warp-Pads/tree/legacy).
+Supports Minecraft: Java Edition 1.16-1.16.4. A legacy version supporting Minecraft 1.14.4-1.15.2 can be found [here](https://github.com/SmoochyPit/Warp-Pads/tree/legacy).
 
 ### Uninstalling
 
