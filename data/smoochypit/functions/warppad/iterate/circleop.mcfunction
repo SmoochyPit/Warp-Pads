@@ -1,3 +1,6 @@
+#as every warp pad
+#at that same warp pad
+#
 #Get relative warp pad distances
 #####################################################
 #
@@ -8,12 +11,13 @@
 # With r being the desired radius and θ being the amount of square rotations in degrees
 #
 #####################################################
+#All distances to the tenth of a block
 
 #For 0 degree region
 	scoreboard players operation @s wp.distX = @s wp.padX
     scoreboard players operation @s wp.distZ = @s wp.padZ
 	scoreboard players operation @s wp.distX -= @e[tag=wp.sourcePad,limit=1] wp.padX
-	scoreboard players operation @e[tag=wp.pad,limit=1,sort=nearest,distance=..0.1] wp.distZ -= @s wp.padZ
+	scoreboard players operation @s wp.distZ -= @e[tag=wp.sourcePad,limit=1] wp.padZ
 	execute if score @s wp.distX matches ..0 run scoreboard players operation @s wp.distX *= @e[tag=wp.sourcePad,limit=1] wp.negativeOne
 	execute if score @s wp.distZ matches ..0 run scoreboard players operation @s wp.distZ *= @e[tag=wp.sourcePad,limit=1] wp.negativeOne
 
@@ -26,11 +30,11 @@
 
 #For 30 degree region, tan(30) = 0.577 = 1 / 1.732 ##### x / 1.732 = x / 1732 * 1000
 	scoreboard players operation @s wp.dist30 = @s wp.distZ
-	scoreboard players set @e[tag=wp.pad] wp.distScale 1732
-	scoreboard players operation @s wp.dist30 /= @s wp.distScale
+	scoreboard players set @s wp.distScale 1732
 	scoreboard players operation @s wp.dist30 *= @e[tag=wp.sourcePad,limit=1] wp.distScale
+	scoreboard players operation @s wp.dist30 /= @s wp.distScale
 
-	scoreboard players operation @s wp.dist60 += @s wp.distX
+	scoreboard players operation @s wp.dist30 += @s wp.distX
 
 #For 60 degree region, tan(60) = 1.732 ##### x * 1.732 = x * 1732 / 1000
 	scoreboard players operation @s wp.dist60 = @s wp.distZ
@@ -42,9 +46,9 @@
 
 #For 15 degree region, tan(15) = 0.268 = 1 / 3.732 ##### x / 3.732 = x / 3732 * 1000
 	scoreboard players operation @s wp.dist15 = @s wp.distZ
-	scoreboard players set @e[tag=wp.pad] wp.distScale 3732
-	scoreboard players operation @s wp.dist15 /= @s wp.distScale
+	scoreboard players set @s wp.distScale 3732
 	scoreboard players operation @s wp.dist15 *= @e[tag=wp.sourcePad,limit=1] wp.distScale
+	scoreboard players operation @s wp.dist15 /= @s wp.distScale
 
 	scoreboard players operation @s wp.dist15 += @s wp.distX
 
