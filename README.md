@@ -37,7 +37,7 @@ To warp, stand on a warp pad, look at the indicator for the desired warp pad and
 Each warp pad requires a primary item and four secondary items to be dropped onto a base block. Instructions for each tier are as follows:
 * Tier 1 - Throw a Golden Apple and 4 Nether Quartz on top of a Gold Block. Has a maximum radius of 5000 blocks.
 * Tier 2 - Throw a Ghast Tear and 4 Phantom Membranes on top of an Emerald Block. Has a maximum radius of 25000 blocks.
-* Tier 3 - Throw a Nether Star and 4 Ender Pearls on top of a Diamond Block. Has no maximum distance.
+* Tier 3 - Throw a Nether Star and 4 Eyes of Ender on top of a Diamond Block. Has no maximum distance.
 
 Warp Pads must be more than 3 blocks apart from one another.
 
@@ -66,7 +66,7 @@ The following items will *not* be dropped:
 * Four secondary items
     * Nether Quartz
     * Phantom Membranes
-    * Ender Pearls
+    * Eyes of Ender
 * Any dyes used in changing the icon color
 
 ### Other
